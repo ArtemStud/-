@@ -30,17 +30,20 @@ public class Main {
                 {"Y", "-.--"},
                 {"Z", "--.."}};
         System.out.print("Добро пожаловать!");
+        System.out.println("Выберите команду и введите текст!");
+        System.out.println("Encrypt - шифровка.");
+        System.out.println("Decrypt - дешифровка.");
+        System.out.println("Exit - выход.");
         while (true){
             boolean eror = false;
             boolean eror1 = false;
             String enc = "";
             String dec = "";
-            System.out.println(" ");
-            System.out.println("Выберите команду и введите текст!");
+            System.out.print(">>> ");
             String comand = sc.next();
             if (comand.equalsIgnoreCase("encrypt")) {
                 int y = 0;
-                String tecst = sc.nextLine();
+                String tecst = sc.nextLine().toUpperCase();
                 tecst = tecst.trim();
                 int bInd = 0;
                 if (tecst.equalsIgnoreCase("exit")) {break;}
@@ -105,7 +108,7 @@ public class Main {
                     if (azbmorze[v][1].equals(laststr)) {
                         last+=azbmorze[v][0];
                         break;}
-                    }
+                }
                 if(v==azbmorze.length){
                     error2=true;}
                 if(!error2){
